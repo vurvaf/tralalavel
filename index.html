@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Путешествия мечты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Hero секция -->
+    <header class="hero-header">
+        <div class="hero-overlay"></div>
+        <h1 id="typewriter" class="hero-title"></h1>
+        <p class="hero-subtitle">Откройте мир с нами</p>
+    </header>
+
+    <main class="container">
+        <!-- Табы -->
+        <section class="tabs-section">
+            <div class="tab-container">
+                <button class="tab-btn active" data-tab="europe">🇪🇺 Европа</button>
+                <button class="tab-btn" data-tab="asia">🌏 Азия</button>
+                <button class="tab-btn" data-tab="america">🌎 Америка</button>
+            </div>
+
+            <!-- Европа -->
+            <div class="tab-content active" id="europe">
+                <div class="responsive-grid">
+                    <div class="card">
+                        <div class="card-gallery">
+                            <img src="img/lond1.jpg" alt="Лондон 1" class="gallery-img active">
+                            <img src="img/lond2.jpg" alt="Лондон 2" class="gallery-img">
+                            <img src="img/lond3.jpg" alt="Лондон 3" class="gallery-img">
+                            <button class="gallery-prev">❮</button>
+                            <button class="gallery-next">❯</button>
+                        </div>
+                        <div class="card-body">
+                            <h3>🇬 Лондон, Великобритания</h3>
+                            <p>Биг-Бен, Тауэрский мост, красные автобусы и королевская гвардия.</p>
+                            <span class="card-price">от 45 000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Азия -->
+            <div class="tab-content" id="asia">
+                <div class="responsive-grid">
+                    <div class="card">
+                        <div class="card-gallery">
+                            <img src="img/Korea1.jpg" alt="Корея 1" class="gallery-img active">
+                            <img src="img/Korea2.jpg" alt="Корея 2" class="gallery-img">
+                            <img src="img/Korea3.jpg" alt="Корея 3" class="gallery-img">
+                            <button class="gallery-prev">❮</button>
+                            <button class="gallery-next">❯</button>
+                        </div>
+                        <div class="card-body">
+                            <h3>🇰🇷 Сеул, Южная Корея</h3>
+                            <p>K-pop, уличная еда, древние дворцы и современные технологии.</p>
+                            <span class="card-price">от 65 000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Америка -->
+            <div class="tab-content" id="america">
+                <div class="responsive-grid">
+                    <div class="card">
+                        <div class="card-gallery">
+                            <img src="img/LA1.jpg" alt="LA 1" class="gallery-img active">
+                            <img src="img/LA2.jpg" alt="LA 2" class="gallery-img">
+                            <img src="img/LA3.jpg" alt="LA 3" class="gallery-img">
+                            <button class="gallery-prev">❮</button>
+                            <button class="gallery-next">❯</button>
+                        </div>
+                        <div class="card-body">
+                            <h3>🇺🇸 Лос-Анджелес, США</h3>
+                            <p>Голливуд, пляжи Калифорнии, звёзды и бесконечное лето.</p>
+                            <span class="card-price">от 75 000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Чек-лист для поездки -->
+        <section class="widget-section checklist-section">
+            <h2>🎒 Чек-лист для поездки</h2>
+            <div class="checklist-container">
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox">
+                    <span class="checklist-custom"></span>
+                    <span class="checklist-text">✈️ Забронировать билеты</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox">
+                    <span class="checklist-custom"></span>
+                    <span class="checklist-text">🏨 Забронировать отель</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox">
+                    <span class="checklist-custom"></span>
+                    <span class="checklist-text">📄 Оформить страховку</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox">
+                    <span class="checklist-custom"></span>
+                    <span class="checklist-text">💳 Взять банковскую карту</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox">
+                    <span class="checklist-custom"></span>
+                    <span class="checklist-text">🔌 Зарядные устройства</span>
+                </label>
+                <label class="checklist-item">
+                    <input type="checkbox" class="checklist-checkbox">
+                    <span class="checklist-custom"></span>
+                    <span class="checklist-text">👕 Собрать вещи</span>
+                </label>
+            </div>
+            <div class="checklist-progress">
+                <span>Выполнено: <strong id="completedTasks">0</strong> из <strong id="totalTasks">6</strong></span>
+            </div>
+        </section>
+
+        <!-- Прогресс-бар -->
+        <section class="widget-section">
+            <h2>🧳 Степень готовности к поездке</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <p class="progress-text">Текущий прогресс: <span id="progressValue">0</span>%</p>
+            <input type="range" min="0" max="100" value="0" id="progressSlider" class="custom-slider">
+        </section>
+
+        <!-- Чекбокс рассылки -->
+        <section class="widget-section">
+            <label class="custom-checkbox-container">
+                <input type="checkbox" id="newsletter">
+                <span class="checkmark"></span>
+                Подписаться на рассылку лучших предложений ✈️
+            </label>
+        </section>
+
+        <!-- Футер -->
+        <footer class="site-footer">
+            <div class="footer-bg"></div>
+            <div class="footer-content">
+                <p>© 2026 Путешествия мечты | Лабораторная работа №6</p>
+                <p>Уфимский университет науки и технологий</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
